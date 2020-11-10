@@ -133,6 +133,21 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+    tiles.add(SizedBox(height: 10));
+    tiles.add(
+      Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.only(left: 90, right: 90),
+        padding: EdgeInsets.only(top: 6, bottom: 6),
+        child: Text(
+          'Or create a new account',
+          style: TextStyle(
+            fontSize: 16,
+            color: Color(0xFFFF7171),
+          ),
+        ),
+      ),
+    );
 
     return Column(children: tiles);
   }
