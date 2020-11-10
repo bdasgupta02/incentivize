@@ -16,22 +16,6 @@ class TaskBoard extends StatefulWidget {
 class _TaskBoardState extends State<TaskBoard> {
   int index = 0;
 
-
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -54,13 +38,11 @@ class _TaskBoardState extends State<TaskBoard> {
   }
 
   Widget page() {
-    print("hit");
     if (index == 0) {
       return Constructor.forTasks();
     } else if (index == 1) {
       return Constructor.forTasksHistory();
     } else {
-      print("hit");
       return calendar();
     }
   }
@@ -74,7 +56,7 @@ class _TaskBoardState extends State<TaskBoard> {
           children: <Widget>[
             Container(
               padding: EdgeInsets.all(3),
-            
+              // incomplete calendar
               decoration: BoxDecoration(
                 color: Color(0xFFFCFCFC),
                 borderRadius: BorderRadius.all(Radius.circular(30)),

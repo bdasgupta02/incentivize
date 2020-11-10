@@ -289,7 +289,16 @@ class Constructor {
     widgets.add(SizedBox(height: 50));
     widgets.add(textSubHeading('Incomplete tasks for today:'));
     for (int i = 0; i < projects.length; i++) {
-      if (projects[i].state == 'Incomplete' || projects[i].state == 'Pending') {
+      if (projects[i].state == 'Incomplete') {
+        widgets.add(SizedBox(height: 10));
+        widgets.add(projects[i].toTile(false));
+      }
+    }
+
+    widgets.add(SizedBox(height: 50));
+    widgets.add(textSubHeading('Pending tasks for today:'));
+    for (int i = 0; i < projects.length; i++) {
+      if (projects[i].state == 'Pending') {
         widgets.add(SizedBox(height: 10));
         widgets.add(projects[i].toTile(false));
       }
@@ -323,7 +332,7 @@ class Constructor {
     }
 
     widgets.add(SizedBox(height: 50));
-    widgets.add(textSubHeading('Completed tasks for today:'));
+    widgets.add(textSubHeading('Last 7 days:'));
     for (int i = 0; i < finished.length; i++) {
       if (finished[i].scale == 2) {
         widgets.add(SizedBox(height: 10));
