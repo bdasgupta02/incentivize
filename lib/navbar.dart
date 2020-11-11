@@ -58,7 +58,7 @@ class _NavbarState extends State<Navbar> {
             ),
           ]),
           child: BottomNavigationBar(
-            type: BottomNavigationBarType.shifting,
+            type: BottomNavigationBarType.fixed,
             currentIndex: _selectedPage,
             onTap: (int index) {
               setState(() {
@@ -79,7 +79,6 @@ class _NavbarState extends State<Navbar> {
                 title: Text(
                   'Dashboard',
                   style: TextStyle(
-                    color: Color(0xFFFF7171),
                     fontSize: 15,
                     fontFamily: 'Khula',
                     height: 1.2,
@@ -99,7 +98,6 @@ class _NavbarState extends State<Navbar> {
                 title: Text(
                   'Family',
                   style: TextStyle(
-                    color: Color(0xFFFF7171),
                     fontSize: 15,
                     fontFamily: 'Khula',
                     height: 1.2,
@@ -119,7 +117,6 @@ class _NavbarState extends State<Navbar> {
                 title: Text(
                   'Tasks',
                   style: TextStyle(
-                    color: Color(0xFFFF7171),
                     fontSize: 15,
                     fontFamily: 'Khula',
                     height: 1.2,
@@ -136,13 +133,14 @@ class _NavbarState extends State<Navbar> {
                   MdiIcons.trophy,
                   color: Color(0xFFFF7171),
                 ),
-                title: Text('Rewards',
-                    style: TextStyle(
-                      color: Color(0xFFFF7171),
-                      fontSize: 15,
-                      fontFamily: 'Khula',
-                      height: 1.2,
-                    )),
+                title: Text(
+                  'Rewards',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontFamily: 'Khula',
+                    height: 1.2,
+                  ),
+                ),
               ),
               BottomNavigationBarItem(
                 backgroundColor: Color(0xFFF0F0F0),
@@ -154,13 +152,14 @@ class _NavbarState extends State<Navbar> {
                   Icons.person,
                   color: Color(0xFFFF7171),
                 ),
-                title: Text('Profile',
-                    style: TextStyle(
-                      color: Color(0xFFFF7171),
-                      fontSize: 15,
-                      fontFamily: 'Khula',
-                      height: 1.2,
-                    )),
+                title: Text(
+                  'Profile',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontFamily: 'Khula',
+                    height: 1.2,
+                  ),
+                ),
               ),
             ],
           ),
